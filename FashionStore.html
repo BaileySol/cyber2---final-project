@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FashionStore - Clothing Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>👗 FashionStore 👕</h1>
+    <p>Welcome to our clothing shop!</p>
+  </header>
+
+  <!-- Login / Register Section -->
+  <section id="auth">
+    <h2>Login / Register</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <button type="submit">Login</button>
+      <button type="button" id="registerBtn">Register</button>
+    </form>
+    <p id="loginMsg"></p>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products">
+    <h2>Our Products</h2>
+    <div class="grid">
+      <!-- כל הפריטים שלך עם שם ומחיר -->
+      <div class="product">
+        <img src="./png/whiteT.jpeg">
+        <h3>Classic White T-Shirt</h3>
+        <p>$30</p>
+        <button onclick="addToCart('Classic White T-Shirt', 30)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="./png/Blue Jeans.jpeg">
+        <h3>Blue Jeans</h3>
+        <p>$50</p>
+        <button onclick="addToCart('Blue Jeans', 50)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="./png/Red Dress.jpeg">
+        <h3>Red Dress</h3>
+        <p>$80</p>
+        <button onclick="addToCart('Red Dress', 80)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="./png/Black Jacket.jpeg">
+        <h3>Black Jacket</h3>
+        <p>$120</p>
+        <button onclick="addToCart('Black Jacket', 120)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="./png/Green Skirt.jpeg">
+        <h3>Green Skirt</h3>
+        <p>$45</p>
+        <button onclick="addToCart('Green Skirt', 45)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="./png/White Sneakers.jpeg">
+        <h3>White Sneakers</h3>
+        <p>$60</p>
+        <button onclick="addToCart('White Sneakers', 60)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="./png/Baseball Cap.jpeg">
+        <h3>Baseball Cap</h3>
+        <p>$20</p>
+        <button onclick="addToCart('Baseball Cap', 20)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="./png/Yellow Polo Shirt.jpeg">
+        <h3>Yellow Polo Shirt</h3>
+        <p>$70</p>
+        <button onclick="addToCart('Yellow Polo Shirt', 70)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="./png/pink dress.jpeg">
+        <h3>Pink Dress</h3>
+        <p>$80</p>
+        <button onclick="addToCart('pink dress', 80)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="./png/Gray Hoodie.jpeg">
+        <h3>Gray Hoodie</h3>
+        <p>$80</p>
+        <button onclick="addToCart('Gray Hoodie', 80)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="./png/Brown Winter Coat.jpeg">
+        <h3>Brown Winter Coat</h3>
+        <p>$80</p>
+        <button onclick="addToCart('Brown Winter Coat', 80)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="./png/purple swimsuit.avif">
+        <h3>Purple Swimsuit</h3>
+        <p>$80</p>
+        <button onclick="addToCart('purple swimsuit', 80)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shopping Cart -->
+  <section id="cart">
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <p id="totalAmount">Total: $0</p>
+
+    <!-- Place Order Form -->
+    <h3>Place Your Order</h3>
+    <form id="orderForm">
+      <label>Full Name: <input type="text" id="orderName" required></label><br>
+      <label>Address: <input type="text" id="orderAddress" required></label><br>
+      <label>Phone: <input type="tel" id="orderPhone" required></label><br>
+      <label>Email: <input type="email" id="orderEmail" required></label><br>
+      <button type="submit">Submit Order</button>
+    </form>
+    <p id="orderMessage"></p>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name">
+      <textarea id="message" placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <div id="messages">
+      <h3>Messages:</h3>
+      <ul id="messageList"></ul>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
